@@ -8,5 +8,4 @@ public class DeadState implements CellState {
 	public void accept(LifeVisitor v, Cell c, GameOfLife g, ArrayList<LifeCommand> cmds) {
 		v.visitDeadCell(c, g, cmds);
 	}
-
 }
