@@ -4,16 +4,16 @@ import java.util.ArrayList;
 
 public class LifeVisitor {
 	
-	public void visit() {
-		//TODO:
+	public void visit(Cell c, GameOfLife g, ArrayList<LifeCommand> cmds) {
+		c.accept(this, g, cmds);
 	}
 	
 	public void visitLiveCell(Cell c, GameOfLife g, ArrayList<LifeCommand> cmds) {
-		//TODO:
+		//TODO: implementation
 	}
 	
 	public void visitDeadCell(Cell c, GameOfLife g, ArrayList<LifeCommand> cmds) {
-		//TODO:
+		//TODO: implementation
 	}
 	
 }
