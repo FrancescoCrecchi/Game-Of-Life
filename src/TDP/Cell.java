@@ -23,7 +23,7 @@ public class Cell {
 	}
 	
 	public void nbrOfNeighbors(GameOfLife game){
-		
+		//TODO
 	}
 	
 	public void toggle(){
