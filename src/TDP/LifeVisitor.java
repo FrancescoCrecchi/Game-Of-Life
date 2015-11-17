@@ -9,11 +9,13 @@ public class LifeVisitor {
 	}
 	
 	public void visitLiveCell(Cell c, GameOfLife g, ArrayList<LifeCommand> cmds) {
-		//TODO: implementation
+		//Rule: if(n < 2 || n > 3) neighbors alive -> dead()
+		//TODO:
 	}
 	
 	public void visitDeadCell(Cell c, GameOfLife g, ArrayList<LifeCommand> cmds) {
-		//TODO: implementation
+		//Rule: if n=3 neighbors are alive -> alive()
+		//TODO:
 	}
 	
 }

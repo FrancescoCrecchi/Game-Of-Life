@@ -26,7 +26,7 @@ public class Cell {
 	}
 	
 	public void nbrOfNeighbors(GameOfLife game){
-		//TODO
+		//Calculate the number of neighbors based on the cell position
 	}
 	
 	public void toggle(){
