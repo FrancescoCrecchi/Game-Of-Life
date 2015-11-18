@@ -25,8 +25,18 @@ public class Cell {
 		state = state.die();
 	}
 	
-	public void nbrOfNeighbors(GameOfLife game){
-		//Calculate the number of neighbors based on the cell position
+	public int nbrOfNeighbors(GameOfLife game){
+		int n = 0;
+		//Return the number of 'alive' neighbors
+		for (int i = row - 1; i < row + 1; i++) {
+			for (int j = col - 1; j < col + 1; j++) {
+				//Check borders and not the cell in use
+				if((i >= 0 && i != row) && (j >= 0 && j != col))
+					if(game.grid[i][j].isAlive())
+						n++;
+			}
+		}
+		return n;
 	}
 	
 	public void toggle(){
