@@ -8,7 +8,11 @@ public class Cell {
 	public int col;
 	private CellState state = null;
 	
-	public Cell(int r, int c){
+	public Cell(int r, int c, boolean alive){
+		if(alive)
+			AliveState.create();
+		else
+			DeadState.create();
 		row=r;
 		col=c;
 	}
