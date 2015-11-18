@@ -3,6 +3,7 @@ package TDP;
 import java.util.ArrayList;
 
 public class AliveState implements CellState {
+	
 	static AliveState instance = null;
 	
 	private AliveState(){

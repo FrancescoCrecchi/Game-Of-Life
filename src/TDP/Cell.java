@@ -10,9 +10,9 @@ public class Cell {
 	
 	public Cell(int r, int c, boolean alive){
 		if(alive)
-			AliveState.create();
+			state = AliveState.create();
 		else
-			DeadState.create();
+			state = DeadState.create();
 		row=r;
 		col=c;
 	}
@@ -32,12 +32,11 @@ public class Cell {
 	public int nbrOfNeighbors(GameOfLife game){
 		int n = 0;
 		//Return the number of 'alive' neighbors
-		for (int i = row - 1; i < row + 1; i++) {
-			for (int j = col - 1; j < col + 1; j++) {
+		for (int i = row - 1; i < row + 2; i++) {
+			for (int j = col - 1; j < col + 2; j++) {
 				//Check borders and not the cell in use
-				if((i >= 0 && i != row) && (j >= 0 && j != col))
-					if(game.grid[i][j].isAlive())
-						n++;
+				if(!(i == row && j == col) && game.grid[i][j].isAlive())
+					n++;
 			}
 		}
 		return n;

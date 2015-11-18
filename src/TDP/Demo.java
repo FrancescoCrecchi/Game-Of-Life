@@ -1,13 +1,24 @@
 package TDP;
 
-public class Demo {
+import java.io.IOException;
 
-	private GameOfLife gameOfLife = null;
+public class Demo {
 	
-	public static void main(String[] args) {
+	public static void main(String[] args) throws InterruptedException, IOException {
 		
+		//Create a new instance of GoL
+		GameOfLife gameOfLife = new GameOfLife(10,10);
+		gameOfLife.initialize();
+		gameOfLife.printBoard();
 		
+		LifeVisitor visitor = new LifeVisitor();
 		
+		for (int i = 0; i < 100; i++) {
+			gameOfLife.advance(visitor);
+			gameOfLife.printBoard();
+			Thread.sleep(1000); //1sec sleep
+			Runtime.getRuntime().exec("clear");
+		}
 	}
 
 }
