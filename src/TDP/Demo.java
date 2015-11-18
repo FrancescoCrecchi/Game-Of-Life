@@ -17,7 +17,8 @@ public class Demo {
 			gameOfLife.advance(visitor);
 			gameOfLife.printBoard();
 			Thread.sleep(1000); //1sec sleep
-			Runtime.getRuntime().exec("clear");
+			System.out.print("\033[H\033[2J");
+			System.out.flush();
 		}
 	}
 
