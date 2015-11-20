@@ -6,10 +6,20 @@ public class Demo {
 	
 	public static void main(String[] args) throws InterruptedException, IOException {
 		
+		GameOfLifeApp gol = new GameOfLifeApp("GameOfLife - Design Patterns Version", 60, 60, 10);
+		
+		gol.run();
+		
+		/*
 		//Create a new instance of GoL
-		GameOfLife gameOfLife = new GameOfLife(10,10);
+		GameOfLife gameOfLife = new GameOfLife(60,60);
+		GameOfLifeUI UI = new GameOfLifeUI("GoL", 60, 60, 10, gameOfLife);
+		GameOfLifeUI UI2 = new GameOfLifeUI("GoL", 60, 60, 5, gameOfLife);
+		
+		gameOfLife.attach(UI);
+		gameOfLife.attach(UI2);
 		gameOfLife.initialize();
-		gameOfLife.printBoard();
+		//gameOfLife.printBoard();
 		
 		LifeVisitor visitor = new LifeVisitor();
 		
@@ -20,6 +30,7 @@ public class Demo {
 			System.out.print("\033[H\033[2J");
 			System.out.flush();
 		}
+		*/
 	}
 
 }
